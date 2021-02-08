@@ -2,8 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>ascetic.core.http</id>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <description></description>
         <authors>ascetic</authors>
+        <owners>ascetic</owners>
+        <tags>HttpClient</tags>
+        <projectUrl>https://github.com/AlexZayats/ascetic.core.http</projectUrl>
+        <license type="expression">MIT</license>
     </metadata>
 </package>
