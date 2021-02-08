@@ -2,8 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <VersionPrefix>1.0.1</VersionPrefix>
+    <Authors>Alex Zayats</Authors>
+    <Version>1.0.2</Version>
+    <PackageId>Ascetic.Core.Http</PackageId>
+    <PackageTags>HttpClient</PackageTags>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="LICENSE.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="LICENSE.md" Pack="true" PackagePath=""/>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Text.Json" Version="5.0.1" />
