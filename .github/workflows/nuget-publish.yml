@@ -20,7 +20,6 @@ jobs:
         env:
           NUGET_AUTH_TOKEN: ${{secrets.NUGET_TOKEN}}        
       - name: Build solution and generate NuGet package
-        run: |  
-          dotnet pack -c Release -o out  
+        run: dotnet pack -c Release -o out  
       - name: Push generated package to GitHub registry
         run: dotnet nuget push ./out/*.nupkg --skip-duplicate --no-symbols true
