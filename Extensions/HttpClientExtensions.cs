@@ -44,10 +44,14 @@ namespace Ascetic.Core.Http.Extensions
         private static async Task<TResult> ReadFromJsonAsync<TResult>(this HttpResponseMessage response, CancellationToken cancellationToken = default)
         {
             var contentStream = await response.Content.ReadAsStreamAsync();
-            return await JsonSerializer.DeserializeAsync<TResult>(contentStream, new JsonSerializerOptions
+            if (contentStream.Length > 0)
             {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-            }, cancellationToken);
+                return await JsonSerializer.DeserializeAsync<TResult>(contentStream, new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                }, cancellationToken);
+            }
+            return default(TResult);
         }
 
         private static HttpContent GetJsonHttpContent<TData>(TData data)
