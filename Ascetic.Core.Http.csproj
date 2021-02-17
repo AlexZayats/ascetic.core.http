@@ -6,16 +6,20 @@
     <PackageId>Ascetic.Core.Http</PackageId>
     <PackageTags>HttpClient</PackageTags>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/AlexZayats/ascetic.core.http</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AlexZayats/ascetic.core.http.git</RepositoryUrl> 
     <RepositoryType>git</RepositoryType> 
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="LICENSE" />
+    <None Remove="icon.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="LICENSE" Pack="true" PackagePath=""/>
+    <None Include="LICENSE" Pack="true" PackagePath="" />
+    <None Include="icon.png" Pack="true" PackagePath=""/>
   </ItemGroup>
 
   <ItemGroup>
