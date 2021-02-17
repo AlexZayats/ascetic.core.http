@@ -3,10 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Authors>Alex Zayats</Authors>
-    <Version>1.0.2</Version>
     <PackageId>Ascetic.Core.Http</PackageId>
     <PackageTags>HttpClient</PackageTags>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/AlexZayats/ascetic.core.http.git</RepositoryUrl> 
+    <RepositoryType>git</RepositoryType> 
   </PropertyGroup>
 
   <ItemGroup>
