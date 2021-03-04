@@ -15,7 +15,6 @@ steps:
   inputs:
     command: 'pack'
     packagesToPack: '**/*.csproj'
-    includesymbols: true
     versioningScheme: 'byEnvVar'
     versionEnvVar: 'Version'
 - task: NuGetCommand@2
