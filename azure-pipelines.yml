@@ -14,10 +14,9 @@ steps:
   inputs:
     command: 'pack'
     packagesToPack: '**/*.csproj'
-    versioningScheme: 'byPrereleaseNumber'
-    majorVersion: '1'
-    minorVersion: '1'
-    patchVersion: '0'
+    includesymbols: true
+    versioningScheme: 'byEnvVar'
+    versionEnvVar: 'Version'
 - task: NuGetCommand@2
   inputs:
     command: 'push'
