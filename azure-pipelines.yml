@@ -5,9 +5,9 @@ pool:
   name: 'Default'
 
 variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+  build: 1
+  buildCounter: $[counter(variables['build'], 0)]
+  semanticVersion: $[format('1.0.{0}', variables['buildCounter'])]
 
 steps:
 - task: DotNetCoreCLI@2
@@ -16,7 +16,7 @@ steps:
     command: 'pack'
     packagesToPack: '**/*.csproj'
     versioningScheme: 'byEnvVar'
-    versionEnvVar: 'Version'
+    versionEnvVar: 'semanticVersion'
 - task: NuGetCommand@2
   displayName: 'Push to NuGet'
   inputs:
